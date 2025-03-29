@@ -1,0 +1,77 @@
+/* Background for the popup */
+body {
+    width: 800px; /* Matches popup width */
+    height: 500px; /* Fixed height for popup */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
+    display: flex; /* Flexbox for centering */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
+
+/* Styling for main heading text */
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center; /* Center text horizontally */
+}
+
+/* Styling for subheading or secondary text */
+h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #444;
+    text-align: center; /* Center text horizontally */
+}
+
+/* Styling for generic paragraph text */
+p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.5;
+    text-align: center; /* Center text horizontally */
+}
+
+/* Run program button styling */
+.runBtn {
+    position: absolute; /* Decouples button from layout flow */
+    bottom: 20px; /* Fixed position at the bottom of the popup */
+    left: 50%; /* Centers horizontally relative to the popup */
+    transform: translateX(-50%); /* Adjusts alignment to achieve perfect centering */
+    padding: 20px 30px;
+    background: linear-gradient(135deg, #42a5f5, #1e88e5);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.runBtn:hover {
+    transform: translateX(-50%) scale(1.1); /* Keeps hover effect without disrupting layout */
+    background: linear-gradient(135deg, #1e88e5, #1976d2);
+}
+
+/* Result container styling */
+.result {
+    margin-top: 20px;
+    padding: 15px; /* Compact padding */
+    background-color: #f1f8e9; /* Light green background */
+    border: 1px solid #c5e1a5; /* Green border */
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 60px); /* Matches popup width minus padding (30px on each side) */
+    max-width: 800px; /* Matches popup's max width */
+    min-height: 150px; /* Reserve space to prevent shifting */
+    max-height: 300px; /* Limit height to prevent excessive growth */
+    text-align: left; /* Align text to the left */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    word-wrap: break-word; /* Ensure long words wrap */
+    white-space: pre-wrap; /* Preserve newlines and spaces */
+  }
+  
