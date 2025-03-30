@@ -120,8 +120,6 @@ def generate_request(url):
     try:
         response = requests.post(url_ppx, json=data, headers=headers)
         response.raise_for_status()
-        with open('logs.txt', 'a') as f:
-            f.write(f'{response.json()["choices"][0]["message"]["content"]}\n\n')
         return response.json()["choices"][0]["message"]["content"]
     except requests.exceptions.RequestException as err:
         return f"[!] Error: {err}"
